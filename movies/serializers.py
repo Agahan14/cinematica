@@ -53,18 +53,18 @@ class MovieSerializer(serializers.ModelSerializer):
             'movie_status',
         ]
 
-    # @staticmethod
-    # def get_movie_status(obj):
-    #
-    #     now = timezone.now()
-    #
-    #     if obj.beginning_of_movie <= now <= obj.ending_of_movie:
-    #         obj.movie_status = 'current'
-    #         return obj.movie_status
-    #
-    #     if obj.beginning_of_movie > now:
-    #         obj.movie_status = 'upcoming'
-    #         return obj.movie_status
+    @staticmethod
+    def get_movie_status(obj):
+
+        now = timezone.now()
+
+        if obj.beginning_of_movie <= now <= obj.ending_of_movie:
+            obj.movie_status = 'current'
+            return obj.movie_status
+
+        if obj.beginning_of_movie > now:
+            obj.movie_status = 'upcoming'
+            return obj.movie_status
 
 
 class ShowTimeSerializer(serializers.ModelSerializer):
