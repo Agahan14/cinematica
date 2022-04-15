@@ -1,6 +1,6 @@
 # cinematica
 
-This project was designed for online booking and buying .
+This project was designed for online booking and buying tickets for cinema.
 
 ## Getting Started
 
@@ -40,7 +40,7 @@ I was helped by drf documentation - [https://www.django-rest-framework.org/](htt
 
 ## links
 
-Links for heroku's app - [https://eshopstore14.herokuapp.com/](https://eshopstore14.herokuapp.com/)
+Links for heroku's app - [https://cinematica14.herokuapp.com/](https://cinematica14.herokuapp.com/)
 
 ## Postman collections
 
