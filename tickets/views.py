@@ -36,25 +36,25 @@ class TicketsDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class OrdersView(generics.ListCreateAPIView):
     serializer_class = OrdersSerializer
-    permission_classes = [IsAuthenticated, ]
+    #permission_classes = [IsAuthenticated, ]
     queryset = Orders.objects.all()
 
 
 class OrdersDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = OrdersSerializer
-    permission_classes = [IsAuthenticated, ]
+    #permission_classes = [IsAuthenticated, ]
     queryset = Orders.objects.all()
 
 
 class FeedbackView(generics.ListCreateAPIView):
     serializer_class = FeedbackSerializer
-    permission_classes = [IsAuthenticated, ]
+    #permission_classes = [IsAuthenticated, ]
     queryset = Feedback.objects.all()
 
 
 class FeedbackDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = FeedbackSerializer
-    permission_classes = [IsAuthenticated, ]
+    #permission_classes = [IsAuthenticated, ]
     queryset = Feedback.objects.all()
 
 
@@ -94,13 +94,13 @@ class TicketTypeDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class ClubCardView(generics.ListCreateAPIView):
     serializer_class = ClubCardSerializer
-    permission_classes = [IsAuthenticated, ]
+    #permission_classes = [IsAuthenticated, ]
     queryset = ClubCard.objects.all()
 
 
 class ClubCardDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ClubCardSerializer
-    permission_classes = [IsAuthenticated, ]
+    #permission_classes = [IsAuthenticated, ]
     queryset = ClubCard.objects.all()
 
 
