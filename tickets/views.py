@@ -1,6 +1,9 @@
 from rest_framework import generics
-from users.permissions import IsAdminOrReadOnly
 
+from users.permissions import (
+    IsAdminOrReadOnly,
+    IsAuthenticated
+)
 from .serializers import (
     TicketSerializer,
     OrdersSerializer,
@@ -23,37 +26,35 @@ from .models import (
 
 class TicketsView(generics.ListCreateAPIView):
     serializer_class = TicketSerializer
-    permission_classes = [IsAdminOrReadOnly]
     queryset = Tickets.objects.all()
 
 
 class TicketsDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TicketSerializer
-    permission_classes = [IsAdminOrReadOnly]
     queryset = Tickets.objects.all()
 
 
 class OrdersView(generics.ListCreateAPIView):
     serializer_class = OrdersSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
+    permission_classes = [IsAuthenticated, ]
     queryset = Orders.objects.all()
 
 
 class OrdersDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = OrdersSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
+    permission_classes = [IsAuthenticated, ]
     queryset = Orders.objects.all()
 
 
 class FeedbackView(generics.ListCreateAPIView):
     serializer_class = FeedbackSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
+    permission_classes = [IsAuthenticated, ]
     queryset = Feedback.objects.all()
 
 
 class FeedbackDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = FeedbackSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
+    permission_classes = [IsAuthenticated, ]
     queryset = Feedback.objects.all()
 
 
@@ -83,24 +84,23 @@ class SeatsDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class TicketTypeView(generics.ListCreateAPIView):
     serializer_class = TicketTypeSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
     queryset = TicketType.objects.all()
 
 
 class TicketTypeDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TicketTypeSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
     queryset = TicketType.objects.all()
 
 
 class ClubCardView(generics.ListCreateAPIView):
     serializer_class = ClubCardSerializer
-    permission_classes = [IsAdminOrReadOnly, ]
+    permission_classes = [IsAuthenticated, ]
     queryset = ClubCard.objects.all()
 
 
 class ClubCardDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ClubCardSerializer
+    permission_classes = [IsAuthenticated, ]
     queryset = ClubCard.objects.all()
 
 
