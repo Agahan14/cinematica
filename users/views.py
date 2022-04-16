@@ -13,7 +13,7 @@ from users.serializers import (
 
 class RegisterView(generics.GenericAPIView):
     serializer_class = UserSerializer
-    permission_classes = AllowAny
+    permission_classes = (AllowAny,)
 
     def post(self, request):
         serializer = UserSerializer(data=request.data)
