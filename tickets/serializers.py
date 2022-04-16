@@ -118,7 +118,7 @@ class ClubCardSerializer(serializers.ModelSerializer):
         ]
 
     def get_balance(self, obj):
-        orders = Tickets.objects.filter(users=obj.user)
+        orders = Tickets.objects.filter(user=obj.user)
         balance = 0
         for i in orders:
             balance += i.price
