@@ -26,6 +26,7 @@ class RegisterView(generics.GenericAPIView):
 
 class LoginView(generics.GenericAPIView):
     serializer_class = LoginSerializer
+    permission_classes = (AllowAny,)
 
     def post(self, request):
         email = request.data["email"]
