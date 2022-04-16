@@ -40,6 +40,7 @@ class TicketSerializer(serializers.ModelSerializer):
 
 
 class OrdersSerializer(serializers.ModelSerializer):
+
     total_price = serializers.SerializerMethodField('get_total_price')
 
     class Meta:
@@ -53,14 +54,11 @@ class OrdersSerializer(serializers.ModelSerializer):
     @staticmethod
     def get_total_price(obj):
         tickets = Tickets.objects.filter(orders=obj.id)
-        card = ClubCard.objects.filter(user=obj.user)
-        print(card)
         total_price = 0
         for ticket in tickets:
-            for cards in card:
-                if cards.discount == 7:
-                    total_price += (ticket.price - ((ticket.price*cards.discount)//100))
+
                 total_price += ticket.price
+
         return total_price
 
 
@@ -91,7 +89,7 @@ class BookingSerializer(serializers.ModelSerializer):
         show_time = data.get('show_time')
         if Booking.objects.filter(seats=seats, show_time=show_time).exists():
 
-            raise serializers.ValidationError('This is already reserved.')
+            raise serializers.ValidationError('This seat is already reserved.')
 
         return data
 

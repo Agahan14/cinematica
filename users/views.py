@@ -1,5 +1,6 @@
 from rest_framework import generics, status
 from rest_framework.exceptions import AuthenticationFailed
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -12,6 +13,7 @@ from users.serializers import (
 
 class RegisterView(generics.GenericAPIView):
     serializer_class = UserSerializer
+    permission_classes = AllowAny
 
     def post(self, request):
         serializer = UserSerializer(data=request.data)

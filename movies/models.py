@@ -42,6 +42,5 @@ class ShowTime(models.Model):
     start_time = models.DateTimeField(default=timezone.now)
     end_time = models.DateTimeField(auto_now=False, blank=True, null=True)
     movie_format = models.ForeignKey(MovieFormat, on_delete=models.CASCADE)
-    is_active = models.BooleanField(default=True)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     rooms = models.ForeignKey(Rooms, on_delete=models.CASCADE)
