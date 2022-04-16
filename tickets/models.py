@@ -64,7 +64,7 @@ class Orders(models.Model):
     total_price = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.id} {self.user}"
+        return f"{self.user}"
 
 
 class Feedback(models.Model):
@@ -93,4 +93,4 @@ class ClubCard(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.id} {self.user}"
+        return f"{self.user}"
