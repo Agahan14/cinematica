@@ -55,4 +55,4 @@ class ShowTime(models.Model):
     rooms = models.ForeignKey(Rooms, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.start_time
+        return f"{self.start_time}"
