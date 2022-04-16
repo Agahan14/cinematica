@@ -63,6 +63,9 @@ class Orders(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     total_price = models.IntegerField(blank=True, null=True)
 
+    def __str__(self):
+        return self.id
+
 
 class Feedback(models.Model):
     rates = [
