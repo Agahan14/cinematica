@@ -45,4 +45,4 @@ Links for heroku's app - [https://cinematica14.herokuapp.com/](https://cinematic
 
 ## Postman collections
 
-[https://www.getpostman.com/collections/89234c196fca9f47d041](https://www.getpostman.com/collections/89234c196fca9f47d041)
+[https://www.getpostman.com/collections/7b3701d9a70032116111](https://www.getpostman.com/collections/7b3701d9a70032116111)
