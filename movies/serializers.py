@@ -75,7 +75,6 @@ class ShowTimeSerializer(serializers.ModelSerializer):
             'start_time',
             'end_time',
             'movie_format',
-            'is_active',
             'movie',
             'rooms',
         ]
