@@ -8,5 +8,5 @@ urlpatterns = [
     path('user/', include('users.urls')),
     path('movies/', include('movies.urls')),
     path('purchase/', include('tickets.urls')),
-    path(''), RegisterView.as_view(),
+    path('', RegisterView.as_view()),
 ]
