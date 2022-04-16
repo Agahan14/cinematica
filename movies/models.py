@@ -53,3 +53,6 @@ class ShowTime(models.Model):
     movie_format = models.ForeignKey(MovieFormat, on_delete=models.CASCADE)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     rooms = models.ForeignKey(Rooms, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.id
