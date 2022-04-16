@@ -2,7 +2,6 @@ from rest_framework import generics
 
 from users.permissions import (
     IsAdminOrReadOnly,
-    #IsAuthenticated
 )
 from .serializers import (
     TicketSerializer,
