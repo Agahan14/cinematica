@@ -34,8 +34,9 @@ You can see all my projects in my GitHub [https://github.com/Agahan14/](https://
 
 ## Acknowledgments
 
-Thanks to the mentor for his great help
-I was helped by drf documentation - [https://www.django-rest-framework.org/](https://www.django-rest-framework.org/)
+Thanks to the mentor for his great help.
+
+I was helped by drf documentation - [https://www.django-rest-framework.org/](https://www.django-rest-framework.org/).
 
 
 ## links
