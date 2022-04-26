@@ -14,7 +14,7 @@ from .models import (
     MovieFormat,
 )
 
-utc=pytz.UTC
+utc = pytz.UTC
 
 
 class CinemasSerializer(serializers.ModelSerializer):
@@ -94,9 +94,7 @@ class ShowTimeSerializer(serializers.ModelSerializer):
         if now > end_time:
             obj.is_active = False
             obj.save()
-            return obj.is_active
         return obj.is_active
-
 
 
 class RoomsFormatSerializer(serializers.ModelSerializer):
