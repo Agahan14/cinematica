@@ -72,6 +72,7 @@ class MovieSerializer(serializers.ModelSerializer):
 
 
 class ShowTimeSerializer(serializers.ModelSerializer):
+
     is_active = serializers.SerializerMethodField()
 
     class Meta:
